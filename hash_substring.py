@@ -11,18 +11,25 @@ def read_input():
         T = input() # second line is text in which to look for pattern 
 
     elif mode.startswith('F'):
-        # input from file
-        file_name = input()
-        if 'a' not in file_name:
-            f = open('tests/'+file_name, 'r')
+        # # input from file
+        # file_name = input()
+        # if 'a' not in file_name:
+        #     f = open('tests/'+file_name, 'r')
 
-            # first line is pattern 
-            # second line is text in which to look for pattern
-            text = f.read().split('\n')
-            P = text[0]
-            T = text[1]
+        #     # first line is pattern 
+        #     # second line is text in which to look for pattern
+        #     text = f.read().split('\n')
+        #     P = text[0]
+        #     T = text[1]
 
-            f.close()
+        #     f.close()
+
+        f = open('tests/06', 'r')
+        text = f.read().split('\n')
+        P = text[0]
+        T = text[1]
+
+        f.close()
     
     
     # returns both lines in one return with the rstrip function
